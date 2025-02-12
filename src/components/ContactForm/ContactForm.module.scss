@@ -1,0 +1,37 @@
+.form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  
+  label {
+    font-weight: 500;
+    color: #4a4a4a;
+  }
+  
+  input, textarea {
+    border: 2px solid #e9ecef;
+    padding: 0.8rem;
+    transition: border-color 0.3s ease;
+    
+    &:focus {
+      border-color: var(--primary-color);
+      box-shadow: none;
+    }
+  }
+  
+  .submitButton {
+    background: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: darken(#007bff, 10%);
+      transform: translateY(-2px);
+    }
+  }
+} 

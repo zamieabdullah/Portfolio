@@ -1,0 +1,148 @@
+.card {
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  width: 100%;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+  }
+  
+  .company {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 0.25rem;
+    text-align: left;
+    word-break: break-word;
+    
+    @media (max-width: 576px) {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .role {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    text-align: left;
+    word-break: break-word;
+    
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+  
+  .meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-left: auto;
+    
+    @media (max-width: 576px) {
+      text-align: left;
+      align-items: flex-start;
+      margin-left: 0;
+      border-top: 1px solid #eee;
+      padding-top: 0.5rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  
+  .period, .location {
+    display: block;
+    color: #6c757d;
+    font-size: 0.85rem;
+    word-break: break-word;
+    
+    @media (max-width: 576px) {
+      margin-right: 1rem;
+    }
+  }
+  
+  .viewButton {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    
+    @media (max-width: 576px) {
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+  
+  .achievements {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      display: flex;
+      line-height: 1.4;
+      font-size: 0.9rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      
+      @media (max-width: 576px) {
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
+      }
+      
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        width: 1.5rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+} 

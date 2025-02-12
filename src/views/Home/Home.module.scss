@@ -1,0 +1,123 @@
+.home {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  .heroContent {
+    padding: 2rem 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contentWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .profileImageWrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, var(--primary-color), #00d4ff);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+    
+    @media (max-width: 480px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+  }
+  
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2.5rem;
+    }
+    
+    .highlight {
+      color: #007bff;
+    }
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .primaryBtn, .secondaryBtn {
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: 500;
+    }
+    
+    .primaryBtn {
+      background: #007bff;
+      border: none;
+      
+      &:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+    }
+    
+    .secondaryBtn {
+      &:hover {
+        background: rgba(0, 123, 255, 0.1);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+} 
